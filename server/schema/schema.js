@@ -2,7 +2,7 @@ const { projects , clients } = require("../sample");
 
 const {GraphQLObjectType, GraphQLID, GraphQLString, GraphQLSchema, GraphQLList } = require('graphql');
 
-
+//GraphQLObjectType is used create a object type of graphql
 //Project Type
 const ProjectType = new GraphQLObjectType({
     name: 'Project',
@@ -56,6 +56,7 @@ const RootQuery = new GraphQLObjectType({
 
 
         clients: {
+            //GraphQLList is used because we are returning the object of sample data, used for objects, array data
             type: new GraphQLList(ClientType),
             resolve(parent, args){
                 return clients;
