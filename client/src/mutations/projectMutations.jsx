@@ -1,5 +1,7 @@
 import { gql } from '@apollo/client';
 
+//Here status value is ProjectStatus which is taken from backend because 
+//status is enum type in backend so we given it a name in backend called projectstatus
 const ADD_PROJECT = gql`
   mutation AddProject(
     $name: String!
